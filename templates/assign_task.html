@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="naviblue">
+<h3 align="center">Assign Task</h3>
+<form   method="post" action="createtask">
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+            <td>Left</td>
+
+            <td>
+        <select name="left">
+    <option> zero</option>
+    <option> one</option>
+    <option> two</option>
+    <option> three</option>
+    <option> four</option>
+    <option> five</option>
+    <option> six</option>
+    <option> seven</option>
+    <option> eight</option>
+    <option> Nine</option>
+</select>
+            </td>
+        </tr>
+        <tr>
+            <td>Operator </td>
+
+     <td><select name="operators">
+    <option> plus</option>
+    <option> minus</option>
+    <option> times</option>
+    <option> divided_by</option>
+     </select></td>
+        </tr>
+        <tr>
+            <td>Right</td>
+ <td><select name="right">
+    <option> zero</option>
+    <option >one</option>
+    <option >two</option>
+    <option >three</option>
+    <option >four</option>
+    <option >five</option>
+    <option >six</option>
+    <option >seven</option>
+    <option >eight</option>
+    <option >Nine</option>
+ </select></td>
+        </tr>
+        <tr>
+            <td>Student</td>
+
+ <td><select name="ddlstudent">
+    {% for i in data %}
+    <option>{{ i.Name }}</option>
+    {% endfor %}
+ </select></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create Task"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

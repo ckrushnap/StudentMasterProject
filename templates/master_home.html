@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="pink">
+<h3 align="center">Master Dashboard</h3>
+<form action="createtask">
+    <table align="center">
+        <tr>
+            <td><a href="{% url 'taskassign' %}"><input type="button" value="Assign new Task"></a><br/></td>
+            <td><a href="{% url 'log_out' %}">logout</a></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
